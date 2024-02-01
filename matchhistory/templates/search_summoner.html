@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Search Summoner</h1>
+    
+    <form method="post" action="{% url 'search_summoner' %}">
+        {% csrf_token %}
+        <label for="summoner_name">Summoner Name:</label>
+        <input type="text" name="summoner_name" id="summoner_name" required>
+        <button type="submit">Search</button>
+    </form>
+{% endblock %}
